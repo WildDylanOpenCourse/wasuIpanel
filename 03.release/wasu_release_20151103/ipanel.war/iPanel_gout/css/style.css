@@ -1,0 +1,207 @@
+body {
+	background: url(../img/bg.jpg) no-repeat;
+}
+body,html{
+	width: 1280px;
+	height: 720px;
+}
+.focus{
+	width: 325px;
+	height: 449px;
+	background: url(../img/focus.png) no-repeat;
+	top:101px;
+	-webkit-transition-duration: 100ms;
+    -webkit-transition-property: left;
+}
+.main{
+	padding-top:120px;
+}
+.main ul{
+	height: 900px;
+}
+.main ul li{
+	height: 413px;
+	width: 289px;
+}
+.ship{
+	left: 300px;
+	background: url(../img/ship_bg.png);
+}
+.passenger{
+	left: 720px;
+	background: url(../img/passenger_bg.png);
+}
+.default{
+	width: 180px!important;
+	left: 1700px;
+}
+.item_text{
+	bottom:-4px;
+}
+.item_shadow{
+	bottom:-408px;
+	left: 0px;
+}
+.item_layer{
+	height: 408px;
+	width: 283px;
+}
+.left_shadow,
+.right_shadow{
+	top: 0;
+}
+.left_shadow{
+	left: 0;
+}
+.right_shadow{
+	right: 0;
+}
+/*船期查询*/
+.ship_main{
+	width:600px;
+	left: 340px;
+	top:100px
+}
+.ship_main h1{
+	padding-bottom: 10px;
+	width: 600px;
+}
+.ship_line{
+	width:600px;
+	height: 2px;
+	background:url(../img/tl_ico.png) no-repeat;
+	background-position: -70px -367px;
+}
+.ship_form{
+	top:20px;
+	width:600px;
+	height: 425px;
+	left: 0;
+}
+.ship_start,.ship_end{
+	height: 87px;
+	font-size: 32px;
+	line-height: 80px;
+	left: 0;
+	top:80px
+}
+.ship_end{
+	top:200px
+}
+.ship_start_input,.ship_end_input{
+	width:395px;
+	height: 84px;
+	left: 207px;
+	top:80px;
+	background:url(../img/tl_ico.png) no-repeat;
+	background-position: -417px -15px;
+}
+.ship_start_input.active,.ship_end_input.active{
+	background-position: -10px -15px;
+}
+.ship_end_input{
+	top:200px;
+}
+.ship_start_input .start,.ship_end_input .end{
+	background-color: transparent;
+	border:0;
+	width: 395px;
+	height: 84px;
+	color: #d8d8d8;
+	font-size: 28px;
+	text-indent: 20px;
+	font-weight: 600;
+	line-height: 80px;
+}
+.start_dropdownlist,.end_dropdownlist{
+	background: #0C1C2B;
+	z-index: 10;
+}
+.start_dropdownlist li,.end_dropdownlist li{
+	height: 40px;
+	line-height: 40px;
+	text-indent: 20px;
+	font-size: 25px;
+	color: #888;
+}
+.start_dropdownlist li.active,.end_dropdownlist li.active{
+	color: #fff;
+}
+.xc_items li,.gt_items li{
+	width: 190px;
+}
+.ship_back,.ship_search,.ship_btn_0,.ship_btn_1,.ship_btn_2{
+	background: url(../img/btnGroup.png) no-repeat;
+	width: 169px;
+	height: 70px;
+	top: 330px;
+}
+.ship_btn_0{
+	left: 0px;
+	background-position:-432px 0;
+}
+.ship_btn_1{
+	left: 217px;
+	background-position:-854px 0;
+}
+.ship_btn_2{
+	left: 435px;
+	background-position:-1060px 0;
+}
+.ship_btn_0,.ship_btn_1,.ship_btn_2{
+	top: 430px;
+}
+.ship_btn_0.active{
+	background-position:-432px -110px;
+}
+.ship_btn_1.active{
+	background-position:-854px -110px;
+}
+.ship_btn_2.active{
+	background-position:-1060px -110px;
+}
+.ship_back{
+	left: 0px;
+}
+.ship_search{
+	left: 435px;
+	background-position:-217px 0;
+}
+.ship_back.active{
+	background-position:0px -110px;
+}
+.ship_search.active{
+	background-position:-217px -110px;
+}
+
+.ship_popup{
+	width: 700px;
+	height: 650px;
+	background: url(../img/bg3_0.png) no-repeat;
+	position:absolute;
+	left: 290px;
+	top:35px;
+	z-index: 999;
+}
+#detail{
+	width: 700px;
+	height: 650px;
+}
+.detail_1{
+	left: 10px;
+	top:42px
+}
+.detail_1 > tbody > tr > td,.detail_2 > tbody > tr > td{
+	height: 27px;
+	line-height: 27px;
+}
+.detail_2{
+	right:10px;
+	top:42px
+}
+
+.detail_head{
+	left: 20px;
+	top:10px;
+	position:absolute;
+}

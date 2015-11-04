@@ -1,0 +1,55 @@
+body{
+	background: url(../img/shanghai_bg.png) no-repeat;
+	width: 1280px;
+	height: 720px;
+}
+.tb_0,.tb_1{
+	position: absolute;
+	left: 175px;
+	top: 82px;
+	width: 931px;
+	height: 493px;
+	font-size: 22px;
+	color: black;
+	text-align: center;
+	visibility: hidden;
+}
+.tb_0 tbody,.tb_1 tbody{
+	font-size: 20px;
+}
+.tb_0 td,.tb_1 td{
+	height: 25px;
+}
+.goback{
+	width: 204px;
+	height: 60px;
+	position: absolute;
+	left: 1043px;
+	top: 29px;
+	background: url(../img/daohang-back.png);
+}
+.goback.active{
+	background: url(../img/daohang-back2.png);
+}
+.pre_btn,.next_btn{
+	width: 150px;
+	height: 74px;
+	position: absolute;
+	left: 907px;
+	top: 633px;
+	background: url(../img/previous.png);
+}
+.pre_btn.active{
+	background: url(../img/previous_0.png);
+}
+.next_btn{
+	left: 1087px;
+	background: url(../img/next.png);
+}
+.next_btn.active{
+	background: url(../img/next_0.png);
+}
+/*hui*/
+.hui{
+	background: #d0d0d0;
+}
