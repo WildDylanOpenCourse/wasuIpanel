@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta http-equiv="Content-Type" name="page-view-size" content="1280*720;text/html;">
+    	<link rel="stylesheet" type="text/css" href="../css/dbroad.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/flight.css"/>
+    	<script src="../js/jquery.test.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="js/flight.js" type="text/javascript" charset="utf-8"></script>
+    	<script type="text/javascript" src="../js/dbroad.js"></script>
+    	<script type="text/javascript" src="../js/chars2.js"></script>
+		<script type="text/javascript" src="../js/systemUtil.js"></script>
+        <title>航班查询</title>
+	</head>
+	<body onload="init()" class="rel ovh" style="background: url(img/bg2_2.jpg) no-repeat;">
+		<div class="left_shadow zx4 abs">
+			<!-- <img src="img/left_shadow.png" /> -->
+		</div>
+		<div class="train_main abs">
+			<h1><img src="img/flight_title.png" /></h1>
+			<div class="train_line"></div>
+			<div class="train_form abs">
+				<div class="train_start abs b hui tr">起点站：</div>
+				<div class="train_start_input abs zx2" id="startInput">
+					<div class="start">舟山</div>
+				</div>
+				<div class="train_end abs b hui tr">终点站：</div>
+				<div class="train_end_input active abs zx1">
+					<div class="end">北京</div>
+					<div class="start_dropdownlist_1 rel">
+						<ul class="items_1">
+							<li  class="items_1_0 active">北京</li>
+							<li class="items_1_1">上海</li>
+							<li class="items_1_2">广州</li>
+							<li class="items_1_3">深圳</li>
+							<li class="items_1_4">成都</li>
+							<li class="items_1_5">重庆</li>
+							<li class="items_1_6">厦门</li>
+							<li class="items_1_7">昆明</li>
+							<li class="items_1_8">杭州</li>
+							<li class="items_1_9">西安</li>
+							<li class="items_1_10">海口</li>
+							<li class="items_1_11">哈尔滨</li>
+							<li class="items_1_12">长沙</li>
+							<li class="items_1_13">武汉</li>
+							<li class="items_1_14">大连</li>
+							<li class="items_1_15">南京</li>
+							<li class="items_1_16">沈阳</li>
+							<li class="items_1_17">青岛</li>
+							<li class="items_1_18">三亚</li>
+							<li class="items_1_19">郑州</li>
+							<li class="items_1_20">天津</li>
+							<li class="items_1_21">长春</li>
+							<li class="items_1_22">南宁</li>
+							<li class="items_1_23">济南</li>
+							<li class="items_1_24">贵阳</li>
+							<li class="items_1_25">福州</li>
+							<li class="items_1_26">温州</li>
+							<li class="items_1_27">太原</li>
+							<li class="items_1_28">桂林</li>
+							<li class="items_1_29">宁波</li>
+						</ul>
+					</div>
+				</div>
+				<div class="train_time abs b hui tr">时&nbsp;&nbsp;&nbsp;间：</div>
+				<div class="train-day abs hui"></div>
+				<div class="change_p"></div>
+				<span class="train_back abs db"></span>
+				<span class="train_search abs db"></span>
+				<span class="train_btn_0 abs db"></span>
+				<span class="train_btn_1 abs db"></span>
+				<span class="train_btn_2 abs db"></span>
+			</div>
+		</div>
+		<div class="train_popup dn">
+			<div id="detail" class="white  mt5 rel">
+				<table width="95%" class="f24 tc abs detail_head">
+					<tr class="pct100"><td class="pct100 tc"><span class="start_station"></span>出发</td></tr>
+				</table>
+				<table width="95%" class="f20 tc bbe abs detail_head2">
+					<tr><td width="20%">航空编号</td><td width="15%">预计出发</td><td width="50%">机场</td><td width="15%">预计到达</td></tr>
+				</table>
+				<table width="680px" class="f20 tc bre abs detail_1">
+					<tbody>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+						<tr><td class="hb" width="20%">MU3752</td><td class="s_time" width="15%">16：40</td><td class="jc" width="50%">三江三江三江三江-长涂三江三江三江</td><td class="e_time" width="15%">17：35</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="dbroad" class="dbroad" style="visibility: hidden;">
+			<div class="line_0">
+				<div class="db0">1</div>
+				<div class="db1">2</div>
+				<div class="db2">3</div>
+				<div class="db3">4</div>
+				<div class="db4">5</div>
+				<div class="db5">6</div>
+				<div class="db6">7</div>
+				<div class="db7">8</div>
+				<div class="db8">9</div>
+				<div class="db9">0</div>
+			</div>
+			<div class="line_1">
+				<div class="db10">Q</div>
+				<div class="db11">W</div>
+				<div class="db12">E</div>
+				<div class="db13">R</div>
+				<div class="db14">T</div>
+				<div class="db15">Y</div>
+				<div class="db16">U</div>
+				<div class="db17">I</div>
+				<div class="db18">O</div>
+				<div class="db19">P</div>
+			</div>
+			<div class="line_2">
+				<div class="db20">A</div>
+				<div class="db21">S</div>
+				<div class="db22">D</div>
+				<div class="db23">F</div>
+				<div class="db24">G</div>
+				<div class="db25">H</div>
+				<div class="db26">J</div>
+				<div class="db27">K</div>
+				<div class="db28">L</div>
+				<div class="db29">关闭</div>
+			</div>
+			<div class="line_3">
+				<div class="db30">Z</div>
+				<div class="db31">X</div>
+				<div class="db32">C</div>
+				<div class="db33">V</div>
+				<div class="db34">B</div>
+				<div class="db35">N</div>
+				<div class="db36">M</div>
+				<div class="db37">删除</div>
+				<div class="db38">中文</div>
+			</div>
+		</div>
+		<div class="pinyin">
+			<div class="pinyin_content">
+				<ul></ul>
+			</div>
+			<div class="font_li_36"></div>
+			<div class="font_li_37"></div>
+		</div>
+	</body>
+</html>

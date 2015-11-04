@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta http-equiv="Content-Type" name="page-view-size" content="1280*720;text/html;">
+    	<link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
+    	<link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+    	<script src="../js/jquery.test.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="static/js/order.js" type="text/javascript" charset="utf-8"></script>
+		<title>挂号信息查询</title>
+	</head>
+	<body onload="init()" class="rel ovh">
+		<div class="top1 rel pct100">
+			<div class="logo abs"></div>
+			<div class="index_back abs"></div>
+		</div>
+		<div class="order_ks abs" id="ks1">
+			<ul class="abs f30 white tc">
+				<li class="l active" src='20102'>心血管疑难病<span class="dn">20102</span></li>
+				<li class="l" src='20103'>门诊呼吸科<span class="dn">20103</span></li>
+				<li class="l" src='20104'>门诊消化科<span class="dn">20104</span></li>
+				<li class="l" src='20105'>门诊神经内科<span class="dn">20105</span></li>
+				<li class="l" src='20106'>门诊心血管科<span class="dn">20106</span></li>
+				<li class="l" src='20107'>门诊血液科<span class="dn">20107</span></li>
+				<li class="l" src='20108'>门诊肾病科<span class="dn">20108</span></li>
+				<li class="l" src='20109'>门诊内分泌科<span class="dn">20109</span></li>
+				<li class="l" src='20110'>门诊高血压病<span class="dn">20110</span></li>
+				<li class="l" src='20113'>神经内科疑难病<span class="dn">20113</span></li>
+				<li class="l" src='20120'>门诊糖尿病科<span class="dn">20120</span></li>
+				<li class="l" src='20122'>门诊妇科内分泌<span class="dn">20122</span></li>
+				<li class="l" src='20128'>神内失眠门诊<span class="dn">20128</span></li>
+				<li class="l" src='20129'>门诊中医肾病<span class="dn">20129</span></li>
+				<li class="l" src='20131'>门诊中医科<span class="dn">20131</span></li>
+				<li class="l" src='20132'>门诊中医糖尿病<span class="dn">20132</span></li>
+				<li class="l" src='20133'>门诊中医胃肠病<span class="dn">20133</span></li>
+				<li class="l" src='20138'>门诊风湿免疫科<span class="dn">20138</span></li>
+				<li class="l" src='20139'>门诊肾病风湿科<span class="dn">20139</span></li>
+				<li class="l" src='20141'>门诊腹透专科<span class="dn">20141</span> </li>
+				<li class="l" src='20142'>门诊运动康复科<span class="dn">20142</span></li>
+				<li class="l" src='20155'>中医肿瘤专科<span class="dn">20155</span></li>
+				<li class="l" src='20212'>门诊胸外科<span class="dn">20212</span></li>
+				<li class="l" src='20213'>门诊肛肠(痔)科<span class="dn">20213</span></li>
+				<li class="l" src='20214'>门诊肝胆外科<span class="dn">20214</span></li>
+				<li class="l" src='20218'>门诊肩周炎<span class="dn">20218</span></li>
+				<li class="l" src='20251'>门诊骨关节专科<span class="dn">20251</span></li>
+				<li class="l" src='20255'>门诊康复医学科<span class="dn">20255</span></li>
+				<li class="l" src='20256'>门诊膝关节专科<span class="dn">20256</span></li>
+				<li class="l" src='20257'>门诊肩关节专科<span class="dn">20257</span></li>
+				<li class="l" src='203'>门诊儿科<span class="dn">203</span></li>
+				<li class="l" src='20306'>门诊中医儿科<span class="dn">20306</span></li>
+				<li class="l" src='20308'>门诊小儿内分泌<span class="dn">20308</span></li>
+				<li class="l" src='205'>门诊耳鼻咽喉科<span class="dn">205</span></li>
+				<li class="l" src='20503'>门诊嗓声科<span class="dn">20503</span></li>
+				<li class="l" src='20601'>门诊口腔肿瘤科<span class="dn">20601</span></li>
+				<li class="l" src='20602'>门诊口腔颌外<span class="dn">20602</span></li>
+				<li class="l" src='20603'>门诊口腔正畸<span class="dn">20603</span></li>
+				<li class="l" src='20604'>门诊口腔修复<span class="dn">20604</span></li>
+				<li class="l" src='20605'>口腔博士联合<span class="dn">20605</span></li>
+				<li class="l" src='207'>门诊皮肤科<span class="dn">207</span></li>
+				<li class="l" src='20701'>门诊银屑病科<span class="dn">20701</span></li>
+				<li class="l" src='208'>门诊妇科<span class="dn">208</span></li>
+				<li class="l" src='20801'>门诊计划生育<span class="dn">20801</span></li>
+				<li class="l" src='20803'>门诊不孕不育<span class="dn">20803</span></li>
+			</ul>
+			<div class="scrollBar1 abs"></div>
+		</div>
+		<div class="order_ks abs  dn" id="ks2">
+			<ul class="abs f30 white tc">
+				<li class="l active" src='20804'>门诊宫颈疾病<span class="dn">20804</span></li>
+				<li class="l" src='20807'>母乳喂养咨询<span class="dn">20807</span></li>
+				<li class="l" src='219'>门诊肝病科<span class="dn">219</span></li>
+				<li class="l" src='22221'>临城眼科门诊<span class="dn">22221</span></li>
+				<li class="l" src='223'>营养咨询科<span class="dn">223</span></li>
+				<li class="l" src='22501'>PICC导管维护<span class="dn">22501</span></li>
+				<li class="l" src='22502'>糖尿病护理<span class="dn">22502</span></li>
+				<li class="l" src='22503'>高血压血脂咨询<span class="dn">22503</span></li>
+				<li class="l" src='22505'>造口伤口护理<span class="dn">22505</span></li>
+				<li class="l" src='20258'>肝结节联合门诊<span class="dn">20258</span></li>
+				<li class="l" src='20259'>面神经炎专科<span class="dn">20259</span></li>
+				<li class="l" src='20260'>胸部康复联合<span class="dn">20260</span></li>
+				<li class="l" src='20261'>食管贲门肿瘤<span class="dn">20261</span></li>
+				<li class="l" src='20262'>肺肿瘤化疗<span class="dn">20262</span></li>
+				<li class="l" src='20221'>门诊颈椎病专科<span class="dn">20221</span></li>
+				<li class="l" src='20224'>甲状腺、肿瘤科<span class="dn">20224</span></li>
+				<li class="l" src='20160'>脑血管筛查防治<span class="dn">20160</span></li>
+				<li class="l" src='20161'>门诊眩晕科<span class="dn">20161</span></li>
+				<li class="l" src='20228'>门诊疼痛科<span class="dn">20228</span></li>
+				<li class="l" src='20229'>门诊性病科<span class="dn">20229</span></li>
+				<li class="l" src='20231'>门诊腰突症专科<span class="dn">20231</span></li>
+				<li class="l" src='20233'>门诊胃肠镜诊疗<span class="dn">20233</span></li>
+				<li class="l" src='20234'>门诊痔瘘专科<span class="dn">20234</span></li>
+				<li class="l" src='20235'>门诊放射治疗<span class="dn">20235</span></li>
+				<li class="l" src='20239'>骨质疏松科<span class="dn">20239</span></li>
+				<li class="l" src='20241'>门诊骨伤科<span class="dn">20241</span></li>
+				<li class="l" src='20250'>肺部结节门诊<span class="dn">20250</span></li>
+				<li class="l" src='20263'>全科医学门诊<span class="dn">20263</span></li>
+				<li class="l" src='20152'>消化内科肝病科<span class="dn">20152</span></li>
+				<li class="l" src='20153'>HP感染专科<span class="dn">20153</span></li>
+				<li class="l" src='20154'>中医脂肪肝专科<span class="dn">20154</span></li>
+				<li class="l" src='20157'>神内癫痫门诊<span class="dn">20157</span></li>
+				<li class="l" src='20158'>认知与心理门诊<span class="dn">20158</span></li>
+				<li class="l" src='20159'>认知与运动障碍<span class="dn">20159</span></li>
+				<li class="l" src='20162'>肉毒毒素治疗<span class="dn">20162</span></li>
+				<li class="l" src='20205'>门诊普外科<span class="dn">20205</span></li>
+				<li class="l" src='20206'>门诊伤科<span class="dn">20206</span></li>
+				<li class="l" src='20207'>门诊乳腺病科<span class="dn">20207</span></li>
+				<li class="l" src='20209'>门诊神经外科<span class="dn">20209</span></li>
+				<li class="l" src='20210'>门诊骨科<span class="dn">20210</span></li>
+				<li class="l" src='20211'>门诊泌尿外科<span class="dn">20211</span></li>
+			</ul>
+			<div class="scrollBar2 abs"></div>
+		</div>
+	</body>
+</html>

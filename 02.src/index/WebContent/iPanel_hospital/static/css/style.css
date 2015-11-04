@@ -1,0 +1,351 @@
+body {
+	background: url(../img/bg2.jpg) no-repeat;
+}
+body,
+html {
+	width: 1280px;
+	height: 720px;
+}
+.top1 {
+	left: 0;
+	top: 0;
+	width: 1280px;
+	height: 720px;
+	background: url(../img/top1.png) no-repeat;
+}
+.index_back {
+	width: 204px;
+	height: 60px;
+	background: url(../img/daohang-back.png);
+	right: 25px;
+	top: 25px
+}
+.index_back.active {
+	background: url(../img/daohang-back2.png);
+}
+.logo {
+	width: 429px;
+	height: 79px;
+	background: url(../img/logo.png) no-repeat;
+	top: 0;
+	left: 0;
+}
+.zsyy {
+	width: 1100px;
+	height: 515px;
+	background: url(../img/zsyy.jpg) no-repeat;
+	top: 150px;
+	left: 90px;
+	background-position: center;
+}
+.zsyy.active {
+	background: url(../img/zsyy.png) no-repeat;
+}
+.order_ks {
+	background: url(../img/bg3.png) no-repeat;
+	width: 1200px;
+	height: 580px;
+	left: 40px;
+	top: 120px
+}
+.doctor_info {
+	width: 1200px;
+	height: 580px;
+	left: 40px;
+	top: 120px
+}
+.doctor_info table thead tr td {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+.order_ks ul {
+	left: 25px;
+	top: 15px;
+	width: 1150px
+}
+.order_ks ul li {
+    width: 215px;
+    height: 62px;
+    line-height: 62px;
+    margin-right: 7px;
+}
+.order_ks ul li.active {
+	background: url(../img/ks_active.png) no-repeat;
+}
+.scrollBar1,
+.scrollBar2 {
+	right: 20px;
+	top: 20px;
+	width: 15px;
+	height: 540px;
+}
+.scrollBar1 {
+	background: url(../img/scrollBar1.png);
+}
+.scrollBar2 {
+	background: url(../img/scrollBar2.png);
+}
+/*doctop*/
+
+.doctor_list_0,
+.doctor_list_1,
+.doctor_list_2,
+.doctor_list_3,
+.doctor_list_4,
+.doctor_list_5 {
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	width: 1200px;
+	height: 70px;
+	font-size: 20px;
+	line-height: 70px;
+	text-align: center;
+	color: #FFFFFF;
+}
+.doctor_list_0.active,
+.doctor_list_1.active,
+.doctor_list_2.active,
+.doctor_list_3.active,
+.doctor_list_4.active,
+.doctor_list_5.active {
+	background: url(../img/doctor_list_bg.png);
+}
+.doctor_name,
+.doctor_tickit,
+.doctor_introduce,
+.doctor_name1,
+.doctor_tickit1,
+.doctor_introduce1 {
+	width: 400px;
+	text-align: center;
+	float: left;
+}
+.doctor_introduce {
+	line-height: 35px;
+}
+.doctor_list_0 {
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	font-size: 24px;
+	top: 0px;
+	line-height: 80px;
+	height: 80px;
+}
+.doctor_list_0 .doctor_introduce,
+.doctor_list_0 .doctor_name,
+.doctor_list_0 .doctor_tickit {
+	line-height: 80px;
+}
+.doctor_list_2 {
+	top: 180px;
+}
+.doctor_list_3 {
+	top: 260px;
+}
+.doctor_list_4 {
+	top: 340px;
+}
+.doctor_list_5 {
+	top: 420px;
+}
+/*doctor_page*/
+
+.doctor_page {
+	width: 400px;
+	height: 74px;
+	position: absolute;
+	top: 510px;
+	left: 840px;
+}
+.doctor_page_0,
+.doctor_page_1 {
+	width: 150px;
+	height: 74px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url(../img/previous.png);
+}
+.doctor_page_1 {
+	background: url(../img/next.png);
+	left: 200px;
+}
+.doctor_page_0.active {
+	background: url(../img/previous_0.png);
+}
+.doctor_page_1.active {
+	background: url(../img/next_0.png);
+}
+/*login*/
+.login_icon {
+	width: 70px;
+	height: 62px;
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	visibility: visible;
+	background: url(../img/login_icon_0.png);
+}
+.login_icon.active {
+	background: url(../img/login_icon_1.png);
+}
+.login_page,.yuyue {
+	width: 541px;
+	height: 720px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background: url(../img/login_bg.png);
+	visibility: hidden;
+}
+.login_0,.yuyue_0 {
+	width: 215px;
+	height: 66px;
+	position: absolute;
+	right: 120px;
+	top: 85px;
+	font-size: 40px;
+	color: #FFFFFF;
+}
+.login_1,
+.login_2,
+.login_3,
+.login_4{
+	width: 336px;
+	height: 59px;
+	position: absolute;
+	right: 30px;
+	top: 212px;
+	font-size: 40px;
+	color: black;
+	background: url(../img/login_input_name.png);
+}
+.login_1.active {
+	background: url(../img/login_input_name_0.png);
+}
+.login_2 {
+	top: 327px;
+	background: url(../img/login_input_num.png);
+}
+.login_2.active {
+	background: url(../img/login_input_num_0.png);
+}
+.login_3 {
+	top: 440px;
+	background: url(../img/login_cred.png);
+}
+.login_3.active {
+	background: url(../img/login_cred_0.png);
+}
+.login_4,.login_5 {
+	width: 478px;
+	height: 59px;
+	position: absolute;
+	top: 570px;
+	right: 30px;
+	background: url(../img/login_btn.png);
+}
+.login_4.active {
+	background: url(../img/login_btn_0.png);
+}
+.login_5{
+    top: 650px;
+    background: url(../img/login__back_btn.png);
+}
+.login_5.active {
+    background: url(../img/login__back_btn_0.png);
+}
+
+.login_num_input,
+.login_cred_input,
+.login_pass_input,
+.login_name_input {
+	width: 260px;
+	height: 50px;
+	position: absolute;
+	right: 60px;
+	top: 3px;
+	font-size: 40px;
+	color: black;
+	line-height: 59px;
+	overflow:hidden;
+}
+.login_cred_input {
+	top: 3px;
+	font-size: 26px;
+	line-height: 54px;
+	width: 273px;
+	right: 56px;
+}
+.login_pass_input {
+	top: 3px;
+}
+/*.dbroad*/ 
+.dbroad {
+	top: 280px;
+	left: 590px;
+}
+.pinyin{
+	top: 280px;
+	left: 160px;
+}
+.pinyin ul li.active{
+	color: #ffd200;
+}
+/*yuyue*/
+.yuyue{
+	background: url(../img/yuyue_detail.png);
+}
+.yuyue_0{
+	width: 255px;
+}
+.yuyue_1{
+	top: 185px;
+	font-size: 44px;
+	background: none;
+	line-height: 74px;
+}
+.yuyue_2{
+	background: none;
+	top: 255px;
+	font-size: 36px;
+	line-height: 73px;
+}
+.yuyue_3{
+	top: 325px;
+	font-size: 44px;
+	background: none;
+	line-height: 60px;
+}
+.yuyue_4{
+	background: none;
+	top: 440px;
+}
+.yuyue_4.active
+.yuyue_5{
+	top: 620px;
+	background: url(../img/login__back_btn.png);
+}
+.yuyue_5.active{
+	background: url(../img/login__back_btn_0.png);
+}
+/*num_waring*/
+.num_waring,.sfz_waring,.success_waring,.fail_waring{
+    width: 423px;
+    height: 293px;
+    position: absolute;
+    left: 400px;
+    top: 200px;
+    display: none;
+    background: url(../img/num_warning.png);
+}
+.sfz_waring{
+    background: url(../img/sfz_warning.png);
+}
+.success_waring{
+    background: url(../img/success_warning.png);
+}
+.fail_waring{
+    background: url(../img/fail_warning.png);
+}

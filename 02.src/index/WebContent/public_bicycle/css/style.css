@@ -1,0 +1,361 @@
+/*重置样式*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+P,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset,
+img {
+	border: 0;
+}
+address,
+caption,
+cite,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+ol,
+ul {
+	list-style: none;
+}
+caption,
+th {
+	text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+q:before,
+q:after {
+	content: ;
+}
+abbr,
+acronym {
+	border: 0;
+}
+body {
+	background: url(../img/bick_bg.png);
+	color: #666;
+	font: 12px/1.5 "微软雅黑", tahoma, arial, 'Hiragino Sans GB', 宋体, sans-serif;
+}
+html {
+	background: #fff;
+}
+body,
+html {
+	width: 1280px;
+	height: 720px;
+}
+.btn_black{
+	width: 204px;
+	height: 60px;
+	background: url(../img/daohang-back.png);
+	position: absolute;
+	right: 100px;
+	top: 75px;
+}
+.btn_black.active{
+	background: url(../img/daohang-back2.png);
+}
+.list0,.list1,.list2,.list3,.list4,.list5,.list6,.list7,.list8{
+	width: 602px;
+	height: 616px;
+	position: absolute;
+	top: 50px;
+	left: 45px;
+	visibility: hidden;
+}
+.list_0,
+.list_1,
+.list_2,
+.list_3,
+.list_4,
+.list_5,
+.list_6,
+.list_7,
+.list_8,
+.list_9,
+.list_10,
+.list_11,
+.list_12,
+.list_13,
+.list_14,
+.list_15,
+.list_16,
+.list_17,
+.list_18,
+.list_19,
+.list_20,
+.list_21,
+.list_22,
+.list_23,
+.list_24,
+.list_25,
+.list_26,
+.list_27,
+.list_28,
+.list_29,
+.list_30,
+.list_31,
+.list_32,
+.list_33,
+.list_34,
+.list_35,
+.list_36,
+.list_37,
+.list_38,
+.list_39,
+.list_40,
+.list_41,
+.list_42,
+.list_43,
+.list_44,
+.list_45,
+.list_46,
+.list_47,
+.list_48,
+.list_49,
+.list_50,
+.list_51,
+.list_52,
+.list_53,
+.list_54,
+.list_55,
+.list_56,
+.list_57,
+.list_58,
+.list_59,
+.list_60,
+.list_61,
+.list_62,
+.list_63,
+.list_64,
+.list_65,
+.list_66,
+.list_67,
+.list_68,
+.list_69,
+.list_70{
+	width: 494px;
+	height: 66px;
+	position: absolute;
+	top: 25px;
+	left: 35px;
+	background: url(../img/list_bg.png);
+}
+.list_0.active,
+.list_1.active,
+.list_2.active,
+.list_3.active,
+.list_4.active,
+.list_5.active,
+.list_6.active,
+.list_7.active,
+.list_8.active,
+.list_9.active,
+.list_10.active,
+.list_11.active,
+.list_12.active,
+.list_13.active,
+.list_14.active,
+.list_15.active,
+.list_16.active,
+.list_17.active,
+.list_18.active,
+.list_19.active,
+.list_20.active,
+.list_21.active,
+.list_22.active,
+.list_23.active,
+.list_24.active,
+.list_25.active,
+.list_26.active,
+.list_27.active,
+.list_28.active,
+.list_29.active,
+.list_30.active,
+.list_31.active,
+.list_32.active,
+.list_33.active,
+.list_34.active,
+.list_35.active,
+.list_36.active,
+.list_37.active,
+.list_38.active,
+.list_39.active,
+.list_40.active,
+.list_41.active,
+.list_42.active,
+.list_43.active,
+.list_44.active,
+.list_45.active,
+.list_46.active,
+.list_47.active,
+.list_48.active,
+.list_49.active,
+.list_50.active,
+.list_51.active,
+.list_52.active,
+.list_53.active,
+.list_54.active,
+.list_55.active,
+.list_56.active,
+.list_57.active,
+.list_58.active,
+.list_59.active,
+.list_60.active,
+.list_61.active,
+.list_62.active,
+.list_63.active,
+.list_64.active,
+.list_65.active,
+.list_66.active,
+.list_67.active,
+.list_68.active,
+.list_69.active,
+.list_70.active{
+	background: url(../img/list_bg_0.png);
+}
+.list_1,
+.list_9,
+.list_17,
+.list_25,
+.list_33,
+.list_41,
+.list_49,
+.list_57,
+.list_65{
+	top: 97px;
+}
+.list_2,
+.list_10,
+.list_18,
+.list_26,
+.list_34,
+.list_42,
+.list_50,
+.list_58,
+.list_66{
+	top: 169px;
+}
+.list_3,
+.list_11,
+.list_19,
+.list_27,
+.list_35,
+.list_43,
+.list_51,
+.list_59,
+.list_67{
+	top: 241px;
+}
+.list_4,
+.list_12,
+.list_20,
+.list_28,
+.list_36,
+.list_44,
+.list_52,
+.list_60,
+.list_68{
+	top: 313px;
+}
+.list_5,
+.list_13,
+.list_21,
+.list_29,
+.list_37,
+.list_45,
+.list_53,
+.list_61,
+.list_69{
+	top: 385px;
+}
+.list_6,
+.list_14,
+.list_22,
+.list_30,
+.list_38,
+.list_46,
+.list_54,
+.list_62,
+.list_70{
+	top: 457px;
+}
+.list_7,
+.list_15,
+.list_23,
+.list_31,
+.list_39,
+.list_47,
+.list_55,
+.list_63{
+	top: 529px;
+}
+.list_0_input,
+.list_1_input,
+.list_2_input,
+.list_3_input,
+.list_4_input,
+.list_5_input,
+.list_6_input,
+.list_7_input{
+	width: 464px;
+	height: 66px;
+	position: absolute;
+	top: 0px;
+	left: 35px;
+	font-size: 35px;
+	line-height: 60px;
+}
+.tiao{
+	width: 28px;
+	height: 561px;
+	position: absolute;
+	top: 80px;
+	left: 590px;
+	background: url(../img/tiao_0.png);
+}
+.map{
+	width: 529px;
+	height: 459px;
+	position: absolute;
+	top: 143px;
+	left: 700px;
+}
