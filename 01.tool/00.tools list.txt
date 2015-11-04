@@ -1,0 +1,7 @@
+jdk1.7		http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+tomcat 7	http://tomcat.apache.org/download-70.cgi
+wildfly 9	http://wildfly.org/downloads/
+eclipse		http://www.eclipse.org/downloads/
+sqlite3		http://www.sqlite.org/download.html
+tomcatPlugin	http://www.eclipsetotale.com/tomcatPlugin/
+sqlite-jdbc
