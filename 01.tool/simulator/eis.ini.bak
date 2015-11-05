@@ -1,0 +1,72 @@
+[default]
+
+data-rate=100000000
+
+screen-width=1280
+screen-height=768
+debug_break = 0
+memory-size=0x9800000
+
+check-mem-size=NO
+#debug-socket = 2
+#memory-size=0x480000
+#use_multi_thread=no
+
+#test-app-manager = yes
+#ui-datafile = xbrowser.dat
+
+###配置UI
+config-xml = G:\UI\UNIFIED_HOTEL\dvb-conf.xml
+test-external-ui = yes
+test-external-ui-localpath = G:\UI\UNIFIED_HOTEL
+#test-external-ui-localpath = E:\ui\TOP_NEW_BLUE_STI7162_develop\TOP_NEW_BLUE_STI7162_develop
+#homepage = file:///C:\Documents and Settings\ip\桌面\NINGXIA\init.htm
+
+#homepage = file:///G:\WORK\数据广播\OCG厂家资料\茁壮\案例\fjsc1\index.htm
+#homepage = file:///E:\WORK\华数\数据广播\html\new2\index.html
+
+#homepage = http://125.210.220.76:8090/HZEqwx/action/weather.do?w=toIndex&stbId=1104002091800024c1263b79&type=0
+
+#homepage = file:///G:\WORK\数据广播\OCG厂家资料\茁壮\案例\JBSJ\index.htm
+#homepage = http://21.254.52.134/inforscreen2.0/g2.0/index.html
+homepage = http://localhost/wasu/g2.0/zxzx/1.html
+#homepage = http://125.210.220.81:8080/HSCommunity/weather.do?w=toIndex&stbId=1104003091800024C12B26C1&type=0
+#homepage = file:///G:\WORK\数据广播\嘉兴三务公开，便民服务-数据广播\滚动需测试\330411105013\index.htm
+####配置字库
+#test-external-font = yes
+#test-external-font-localfile = G:\cvs\release_20612\xfont.dat
+
+####配置码流
+PREFERRED_TS_SRC = filelist
+#PREFERRED_TS_SRC = usbcards
+
+bitspersecond-tsfile = 40000000!
+download-file = /3001/
+
+dvb-deliveries = 315
+
+ts-315 = g:\TS\hangzhou\315_0502_163214.ts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
