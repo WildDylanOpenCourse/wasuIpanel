@@ -15,7 +15,8 @@ var time_url = base_url+"GetFlight/";
 // 天气信息后台请求的URL
 var weather_url = base_url+"GetWeather/";
 // 华数主页URL
-var wasu_url = "http://21.254.52.134/inforscreen2.0_zs/g2.0/index.html";
+//var wasu_url = "http://21.254.52.134/inforscreen2.0_zs/g2.0/index.html";
+var wasu_url = "http://21.254.52.141/cloudidea.imcp/dispatchIndex.action?portalParam=BDP";
 // 三务公开基准URL
 var sanwu_base_url = "http://21.254.49.18/dispatchIndex.action";
 // 服务器地址
@@ -27,8 +28,16 @@ function getCookie(sName){
 	{
 		var aCrumb = aCookie[i].split("=");
 		if (sName == aCrumb[0]){
-		  return unescape(aCrumb[1]);
+		  return decodeURIComponent(aCrumb[1]);
 		}
 	}
 	return null;
+}
+//从URL中取得特定参数
+function getParamString(url,paramName){
+	var result = new RegExp("(^|)"+paramName+"=([^\&]*)(\&|$)","gi").exec(url),param;
+	if(param=result){
+		return param[2];
+	}
+	return "";
 }

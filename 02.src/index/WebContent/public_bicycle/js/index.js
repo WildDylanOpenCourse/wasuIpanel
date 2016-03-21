@@ -166,7 +166,7 @@ function grabEvent() {
 			break;
 		case 13: //enter
 			if (area_Pos == 1) {
-				location.href = '../index.html?5';
+				location.href = '../index.html?tag=5';
 			}
 			return 0;
 			break;
@@ -174,7 +174,7 @@ function grabEvent() {
 			return 0;
 			break;
 		case 340: //back
-			location.href = '../index.html?5';
+			location.href = '../index.html?tag=5';
 			return 0;
 			break;
 		case 372: //上一页

@@ -103,7 +103,7 @@ function setUserInfo() {
 		var info = arrCookies[i].split("=");
 		//姓名
 		if("userName" == info[0]) {
-			$(".login_name_input").html(decodeURI(info[1]));
+			$(".login_name_input").html(decodeURIComponent(info[1]));
 			continue;
 		//手机号码
 		} else if("userNum" == info[0]) {
@@ -453,7 +453,7 @@ function grabEvent() {
 					});
 					dbroad_enter("login_name_input");
 					login_num = $(".login_name_input").html();
-					document.cookie = "userName="+encodeURI(login_name);
+					document.cookie = "userName="+encodeURIComponent(login_name);
 				} else if(l_Pos == 2) {
 					dbroad_enter("login_num_input");
 					login_num = $(".login_num_input").html();

@@ -13,7 +13,7 @@ function init() {
 	var length = location.href.split("?").length;
 	// 没有参数的情况
 	if(1 == length) {
-		returnURL = "../index.html?3";
+		returnURL = "../index.html?tag=3";
 	// 有参数的情况
 	} else {
 		// 从URL中取得返回主页面的地址

@@ -141,7 +141,7 @@ function grabEvent() {
 					$(".start_dropdownlist_1").show();
 					area_Pos = 41;
 				} else if (list_Pos == 2) {
-					location.href = '../index.html?2';
+					location.href = '../index.html?tag=2';
 				} else if (list_Pos == 3) {
 					list_Pos = 9; //弹出的查询记录 指针
 					$(".train_search").removeClass("active");
@@ -242,7 +242,7 @@ function grabEvent() {
 			break;
 		case 340: //back
 		case 8:
-			location.href = '../index.html?2';
+			location.href = '../index.html?tag=2';
 			return 0;
 			break;
 		case 372: //上一页

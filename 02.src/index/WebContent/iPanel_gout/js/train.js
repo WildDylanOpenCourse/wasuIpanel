@@ -540,7 +540,7 @@ function grabEvent() {
 				list_Pos = 10;
 				$(".train_search").addClass("active");
 			} else if (list_Pos == 9) {
-				location.href = '../index.html?2';
+				location.href = '../index.html?tag=2';
 				// 查询按钮按下
 			} else if (list_Pos == 10) {
 				// change_p 2-8
@@ -722,7 +722,7 @@ function grabEvent() {
 		break;
 	case 340: // back
 	case 8:
-		location.href = '../index.html?2';
+		location.href = '../index.html?tag=2';
 		return 0;
 		break;
 	case 372: // 上一页

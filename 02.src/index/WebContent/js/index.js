@@ -9,6 +9,7 @@ var list_Pos = 0; // 导航指针
 var list_Pos_t = 0; // 记录导航的前一个指针
 var r = 0; // 上下部分指针
 var x = 0; // 判断要消失的页面
+var returnURL = ""; // 返回页面地址
 
 var stoken = "F7E0E98A090BB20CB8F50FBA18735846";
 var apiKey = "12345";
@@ -38,14 +39,6 @@ function showClock() {
 	$('.minutes').html(minutes);
 
 	setTimeout("showClock()", 60000);
-	// hours = parseInt(hours);
-	// if (hours >= 0 && hours < 12) {
-	// $('.talk').text("上午好！");
-	// } else if (hours >= 12 && hours <= 18) {
-	// $('.talk').text("下午好！");
-	// } else if (hours >= 19 && hours <= 24){
-	// $('.talk').text("晚上好！");
-	// };
 }
 
 // 从后台取时间
@@ -83,7 +76,7 @@ function getWeather(call) {
 		success : function(data) {
 			var weather = data;
 			$(".weather").text(weather);
-			document.cookie = "weather="+encodeURI(weather);
+			document.cookie = "weather="+encodeURIComponent(weather);
 		}
 	});
 }
@@ -95,7 +88,7 @@ function getWeatherFromCookie() {
 		var info = arrCookies[i].split("=");
 		//天气
 		if("weather" == info[0]) {
-			$(".weather").text(decodeURI(info[1]));
+			$(".weather").text(decodeURIComponent(info[1]));
 			return true;
 		}
 	}
@@ -108,18 +101,29 @@ function init() {
 	gettime();
 	// init
 	var href = location.href;
-	var length = href.split("?").length;
-	var news_id = href.split("?")[length - 1];
+	var news_id = getParamString(href, "tag");
+	returnURL = getParamString(href, "returnURL");
 	
-	// 从别的页面第一次进入主页面
-	if (length == 1) {
+	// 没有参数tag的情况下
+	if ("" == news_id) {
 		list_Pos = 0;
-	// 从子页面跳转回主页面
+	// 有参数tag的情况下
 	} else {
 		// 得到导航指针和它的前一个指针(这种情况下就是他本身)
 		list_Pos = parseInt(news_id)
 		list_Pos_t = news_id;
 	}
+	// 返回页面地址
+	if ("" == returnURL) {
+		if (null != getCookie("returnURL")) {
+			returnURL = getCookie("returnURL");
+		} else {
+			returnURL = wasu_url;
+		}
+	} else {
+		document.cookie = "returnURL="+encodeURIComponent(returnURL);
+	}
+	
 	change_tv_bg();
 	$(".contentBody_0_bottom" + list_Pos).css({
 		'visibility' : "visible"
@@ -130,8 +134,8 @@ function init() {
 	});
 	$(".contentBody_1_li_" + list_Pos).addClass("active");
 	
-	// 第一次进入主页面或者cookie里没有天气信息
-	if(length != 1 || !getWeatherFromCookie()) {
+	// cookie里没有天气信息
+	if("" == news_id || !getWeatherFromCookie()) {
 		// 后台取定海的天气
 		getWeather("getDinghaiWeather");
 	}
@@ -146,7 +150,7 @@ function init() {
 // 跳转三务公开的函数getCookie("stbid")
 function goToSanwu() {
 	var sanwu_url;
-	sanwu_url = sanwu_base_url+'?type=1&stbId='+hardware.STB.serial+'&index=http://22.192.1.201:9005/index.html?6';//+location.href;
+	sanwu_url = sanwu_base_url+'?type=1&stbId='+hardware.STB.serial+'&index=http://22.192.1.201:9005/index.html?tag=6';//+location.href;
 	location.href = sanwu_url;
 }
 
@@ -542,15 +546,15 @@ function grabEvent() {
 	case 13: // enter
 		if (r == 1) {
 			change_left_right();
-			 if (list_Pos == 7) {
-				location.href = wasu_url;
+			if (list_Pos == 7) {
+				location.href = returnURL;
 			} 
 		} else if (r == 0) {
 			if (list_Pos == 0) {
 				$(".contentBody_0_bottom" + list_Pos).css({
 					'visibility' : "hidden"
 				});
-				location.href = '../index/zhengce_service/index.html?' + zz_Pos;
+				location.href = '../index/zhengce_service/index.html?tag=' + zz_Pos;
 				// 进入政策服务的子页面 关闭视频
 				closeit();
 			} else if (list_Pos == 1) {
@@ -602,7 +606,7 @@ function grabEvent() {
 		break;
 	case 340: // back
 		//回到首页
-		location.href = wasu_url;
+		location.href = returnURL;
 		return 0;
 		break;
 	case 372: // 上一页

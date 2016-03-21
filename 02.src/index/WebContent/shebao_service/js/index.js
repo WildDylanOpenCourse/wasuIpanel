@@ -569,7 +569,7 @@ function grabEvent() {
 					$(".gongzhong_" + gongzhong_Pos).addClass("active");
 					area_Pos = 4;
 				} else if (left_Pos == 0) {
-					location.href = '../index.html?1';
+					location.href = '../index.html?tag=1';
 				} else if (left_Pos == 2) {
 					$(".content_top").addClass("active");
 					$(".content_left_" + left_Pos).removeClass("active");
@@ -680,9 +680,9 @@ function grabEvent() {
 			break;
 		case 340: //back
 			if(area_Pos == 0){
-				location.href = '../index.html?1';
+				location.href = '../index.html?tag=1';
 			}else if (area_Pos == 1) {
-				location.href = '../index.html?1';
+				location.href = '../index.html?tag=1';
 			}else if (area_Pos == 3) {//工作
 				$(".detail").css({
 					'visibility': 'hidden'
@@ -719,7 +719,7 @@ function grabEvent() {
 					$(".content_right_bottom_ul_li_0").addClass("active");
 		 		}
 		 	}else if (area_Pos == 5) {
-		 		 location.href = '../index.html?1';
+		 		 location.href = '../index.html?tag=1';
 		 	}else if (area_Pos == 6) {
 		 		$(".build").hide();
 				area_Pos--;

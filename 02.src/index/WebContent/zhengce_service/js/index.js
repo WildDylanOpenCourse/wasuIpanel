@@ -7,26 +7,38 @@ var q = 0; // 区块指针
 var newsContentsList; // 新闻列表的数组
 var page_num = 0; // 页号
 var news_num = 0; // 获取的新闻数量
+var returnURL = "../index.html?tag=0"; // 返回地址
 
 function init() {
 		// init
 		var href = location.href;
-		var length = href.split("?").length;
-		var news_id = href.split("?")[length - 1];
+		var news_id = getParamString(href, "tag");
 		news_Pos = parseInt(news_id);
 		$(".content_0_" + news_Pos).addClass("active");
 		// 页号
-		var offset = href.split("?")[1].split('=')[1];
+		var offset = getParamString(href, "offset");
 		if(typeof offset === 'undefined' || offset == '') {
 			page_num = 0;
 		} else {
 			page_num = offset;
+		}
+		// 返回地址
+		if("" != getParamString(href, "returnURL")) {
+			returnURL = getParamString(href, "returnURL");
 		}
 		getNews();
 
 	}
 	// 政策信息列表
 
+//从URL中取得特定参数
+function getParamString(url,paramName){
+	var result = new RegExp("(^|)"+paramName+"=([^\&]*)(\&|$)","gi").exec(url),param;
+	if(param=result){
+		return param[2];
+	}
+	return "";
+}
 // 从后台取新闻
 function getNews() {
 
@@ -69,7 +81,6 @@ function getPageNews() {
 			// 如果有图片 取本条新闻第一张图片 TODO 图片不显示
 			if(newsContentsList[index].img.length > 0) {
 				var img = newsContentsList[index].img.split(';');
-//				var imghtml = '<img src="img/'+news_Pos+'/'+img[0]+'" width=271 height=194>';
 				var imghtml = '<img src="'+base_url+'newsimg/'+news_Pos+'/'+img[0]+'" width=271 height=194>';
 				$(".content_1_0_0_2").eq(index).html(imghtml);
 			// 没有图片 内部html为空
@@ -107,7 +118,7 @@ function getDetailNews() {
 	var rowid = $("#rowid_"+body_Pos).text();
 	var detail_url = "../zhengce_service/news.html";
 	detail_url = detail_url + "?offset=" + page_num + 
-	                          "?rowid=" + rowid + "?" + news_Pos;
+	                          "&rowid=" + rowid + "&tag=" + news_Pos + "&returnURL=" + returnURL;
 	location.href = detail_url;
 }
 
@@ -260,7 +271,7 @@ function grabEvent() {
 						page_num++
 					}
 				} else if (bottom_Pos == 0) {
-					location.href = '../index.html?0';
+					location.href = returnURL;//'../index.html?tag=0';
 				}
 			// 中间信息
 			} else if (q == 1) {
@@ -273,7 +284,7 @@ function grabEvent() {
 			break;
 		case 340: // back
 			//回到首页
-			location.href = '../index.html?0';
+			location.href = returnURL;//'../index.html?tag=0';
 			return 0;
 			break;
 		case 372: // 上一页

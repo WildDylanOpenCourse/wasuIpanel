@@ -11,23 +11,32 @@ var page_part_num = 0; //当前页的上下页标号
 var page_text_array=new Array();
 var max_page_line_num = 0; //最大行数
 var page_line_num = 4; //页面显示的行数
+var returnURL = ""; // 返回地址
 
 function init() {
 	$(".content_2_" + focus_Pos).addClass("active");
 	var urlinfo = location.href;
 	//页号
-	page_num = urlinfo.split("?")[1].split("=")[1];
+	page_num = getParamString(urlinfo, "offset");
 	//新闻编号
-	rowid = urlinfo.split("?")[2].split("=")[1];
+	rowid = getParamString(urlinfo, "rowid");
 	//新闻类型
-	var href = location.href;
-	var length = href.split("?").length;
-	var news_id = href.split("?")[length - 1];
+	var news_id = getParamString(urlinfo, "tag");
 	newsType = parseInt(news_id);
+	// 返回地址
+	returnURL = getParamString(urlinfo, "returnURL");
 	//从后台取新闻
 	getNews();
 }
 
+//从URL中取得特定参数
+function getParamString(url,paramName){
+	var result = new RegExp("(^|)"+paramName+"=([^\&]*)(\&|$)","gi").exec(url),param;
+	if(param=result){
+		return param[2];
+	}
+	return "";
+}
 
 //从后台取新闻 
 function getNews() {
@@ -132,7 +141,7 @@ function setNewsImg() {
 //跳转index.html的函数
 //url带参数页号page_num、政策信息指针newsType
 function getNewsIndex() {
-	var indexurl = 'index.html?offset=' + page_num + '?' + newsType;
+	var indexurl = 'index.html?offset=' + page_num + '&tag=' + newsType + "&returnURL=" + returnURL;
 	location.href = indexurl;
 }
 

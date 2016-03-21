@@ -205,7 +205,7 @@ function grabEvent() {
 			//enter
 		case 13:
 			if (pos == 2) {
-				location.href = '../index.html?2';
+				location.href = '../index.html?tag=2';
 			} else if (pos == 100) {
 				location.href = '../iPanel_gout/train.html';
 			} else if (pos == 101) {
@@ -359,7 +359,7 @@ function grabEvent() {
 			break;
 		case 340: //back
 		case 8:
-			location.href = '../index.html?2';
+			location.href = '../index.html?tag=2';
 			return 0;
 			break;
 		case 372: //上一页

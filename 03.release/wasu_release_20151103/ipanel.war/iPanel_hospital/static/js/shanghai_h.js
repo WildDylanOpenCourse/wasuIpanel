@@ -72,7 +72,7 @@ function grabEvent() {
 			break;
 		case 13: //enter
 			if (list_Pos == 0) {
-				location.href = '../index.html?3';
+				location.href = '../index.html?tag=3';
 			} else if (list_Pos == 1) {
 				$(".tb_0").css({
 					'visibility': 'visible'
@@ -94,7 +94,7 @@ function grabEvent() {
 			return 0;
 			break;
 		case 340: //back
-			location.href = '../index.html?3';
+			location.href = '../index.html?tag=3';
 			return 0;
 			break;
 		case 372: //上一页
